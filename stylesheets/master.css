@@ -1,0 +1,82 @@
+body {
+  margin-top: 16px;
+  font-family: Helvetica,Arial,FreeSans;
+}
+
+#container {
+  margin: 0 auto;
+  width: 700px;
+}
+
+p, ol, ul {
+  margin: 5px 0;
+}
+
+.download {
+  float: right;
+  width: 38%;
+  text-align: center;
+  margin: 8px 0 48px 1em;
+  padding: 10px 0;
+  background-color: #eff2f7;
+  border: 1px solid #ccd5e4;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  behavior:url(../javascripts/border-radius.htc);
+}
+
+.clone {
+  color: #888;
+  font-size: 11px;
+}
+
+h1 {
+  font-size: 48px;
+  color: #3b5998;
+  margin: 0;
+}
+h1 a {
+  text-decoration: none;
+  color: #3b5998;
+}
+.subtitle {
+  font-style: italic;
+  margin-bottom: 16px;
+}
+h2 {
+  font-size: 24px;
+  color: #627aad;
+  margin: 16px 0 0;
+}
+h3 {
+  font-size: 20px;
+  margin: 8px 0 0.2em;
+  color: #627aad;
+}
+a {
+  color: #3b5998;
+}
+pre {
+  background-color: #eff2f7;
+  border: 1px solid #ccd5e4;
+  color: #333;
+  font-size: 12px;
+  padding: 10px;
+  margin 5px 0;
+}
+.legal {
+  font-size: 14px;
+  margin-right: 80px;
+}
+.footer {
+  padding-top: 30px;
+  font-size: 14px;
+  font-style: italic;
+}
+input {
+  font: 20px "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}
+input.hint {
+  color: #ccd5e4;
+}
