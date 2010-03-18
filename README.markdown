@@ -1,78 +1,39 @@
-# jquery.token-field
+# jquery.hint
 
-Add support for converting an English representation of elapsed time into seconds and back (with validation).
+jquery plugin to convert field labels into in-field hints i.e. sample text
 
 ## Usage
 
-1. Copy javascript, stylesheet and images to your project.
+1. Copy javascript to your project.
 
-2. Include javascript and stylesheets in your html.
+2. Include javascript in your html.
 
         <script src="/javascripts/jquery.js" type="text/javascript"></script>
-        <script src="/javascripts/jquery.token-field.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="/stylesheets/token-field.css" type="text/css" media="screen">
+        <script src="/javascripts/jquery.hint.js" type="text/javascript"></script>
 
-3. Add textarea or input[type=text] to your html with comma-delimited values.
+3. Add input[type=text] to your html with corresponding label containing sample/hint text.
 
-        <textarea class='email'>one@domain.com,two@other.net,three@somewhere.ca</textarea>
+        <label for='email'>email@domain.com</label>
+        <input type='text' id='email' class='hinted'/>
 
 4. Invoke the plugin in your document ready handler.
 
         $(document).ready(function() {
-          $('textarea.email').tokenField();
+          $('input.hinted').hint();
         });
 
 ## Options
 
-       regex: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-       delimiters: ', ',
-       max: 0,
-       nested: false,
-       badToken: function() { $(this).val(''); },
-       tooMany: function() { $(this).val(''); }
+### hintClass
+Class name to add to field when hint is present.
 
-### badToken
-A callback function to implement behaviour when an token is invalid.
-
-Default: clear the invalid token
-
-### delimiters
-A string containing the characters to recognize as delimiters for tokens.
-
-Default: ', ' (ie. comma and/or space)
-
-### max
-The maximum number of values to allow.
-
-Default: 0 (unlimited)
-
-### nested
-Set to true to preserve the legacy behaviour of token values being stored in multiple hidden
-input elements with the same name.
-
-Set to false to store token values in a single hidden input element with a comma-delimited value.
-
-Default: false (single, comma-delimited value)
-
-### regex
-An alternate regular expression for validating values.
-
-Default: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i (email address)
-
-### tooMany
-A callback function to implement behaviour when the number of tokens exceeds the maximum (if provided).
-
-Default: clear the invalid token
+Default: 'hint'
 
 ## CHANGES
 
-* __IMPORTANT__: An incompatability was introduced when nested input values were deprecated
-  in favour of a single comma-delimited value. The original behaviour may be preserved using
-  the nested option with a value of true. (2010/03/18)
-
 ## TODO
 
-* make sure form submission is correct
+* support for password fields? perhaps dynamically changing type from text to password (and back).
 
 ## Legal
 
