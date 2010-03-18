@@ -13,7 +13,7 @@ jquery plugin to convert field labels into in-field hints i.e. sample text
 
 3. Add input[type=text] to your html with corresponding label containing sample/hint text.
 
-        <label for='email'>email@domain.com</label>
+        <label for='email'>Email address</label>
         <input type='text' id='email' class='hinted'/>
 
 4. Invoke the plugin in your document ready handler.
